@@ -81,10 +81,14 @@ class CustomSonoffCluster(CustomCluster):
     .switch(
         CustomSonoffCluster.AttributeDefs.child_lock.name,
         CustomSonoffCluster.cluster_id,
+        translation_key="child_lock",
+        fallback_name="Child lock",
     )
     .switch(
         CustomSonoffCluster.AttributeDefs.open_window.name,
         CustomSonoffCluster.cluster_id,
+        translation_key="open_window",
+        fallback_name="Open window",
     )
     .number(
         CustomSonoffCluster.AttributeDefs.frost_protection_temperature.name,
@@ -94,6 +98,8 @@ class CustomSonoffCluster(CustomCluster):
         step=0.5,
         unit=UnitOfTemperature.CELSIUS,
         multiplier=0.01,
+        translation_key="frost_protection_temperature",
+        fallback_name="Frost protection temperature",
     )
     .add_to_registry()
 )
