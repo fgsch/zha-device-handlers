@@ -101,5 +101,25 @@ class CustomSonoffCluster(CustomCluster):
         translation_key="frost_protection_temperature",
         fallback_name="Frost protection temperature",
     )
+    .number(
+        CustomSonoffCluster.AttributeDefs.valve_opening_degree.name,
+        CustomSonoffCluster.cluster_id,
+        min_value=0.0,
+        max_value=100.0,
+        step=1.0,
+        translation_key="valve_opening_degree",
+        fallback_name="Valve opening degree",
+        initially_disabled=True,
+    )
+    .number(
+        CustomSonoffCluster.AttributeDefs.valve_closing_degree.name,
+        CustomSonoffCluster.cluster_id,
+        min_value=0.0,
+        max_value=100.0,
+        step=1.0,
+        translation_key="valve_closing_degree",
+        fallback_name="Valve closing degree",
+        initially_disabled=True,
+    )
     .add_to_registry()
 )
