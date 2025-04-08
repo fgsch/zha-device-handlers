@@ -363,6 +363,7 @@ class TuyaMoesCover0601(TuyaWindowCover):
         # "class": "zigpy.device.Device"
         # }
         MODELS_INFO: [
+            ("_TZE200_vdiuwbkq", "TS0601"),
             ("_TZE200_zah67ekd", "TS0601"),
             ("_TZE200_nueqqe6k", "TS0601"),
             ("_TZE200_gubdgai2", "TS0601"),
@@ -485,6 +486,7 @@ class TuyaMoesCover0601_alt_controls2(TuyaWindowCover):
         # }
         MODELS_INFO: [
             ("_TZE200_2odrmqwq", "TS0601"),
+            ("_TZE200_hojryzzd", "TS0601"),
         ],
         ENDPOINTS: {
             1: {
